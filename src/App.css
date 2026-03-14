@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&display=Cormorant+Garamond:wght@600;700&display=swap');
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -332,9 +332,25 @@ body {
   .cta-banner h2 { font-size: 1.8rem; }
 
   .footer { padding: 40px 20px 20px; }
-  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
-  .footer-logo-img { filter: none; height: 50px; }
-
+  .footer-grid { 
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 50px;
+    margin-bottom: 50px;
+    align-items: start;
+  }
+  .footer-logo-img { 
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 16px;
+  }
+  .footer .logo-stack .logo-top {
+    color: #60a5fa;
+  }
+  .footer .logo-stack .logo-bottom {
+    color: #94a3b8;
+  }
   .ticker-item { padding: 0 20px; font-size: 0.75rem; }
 }
 .logo-stack {
@@ -344,20 +360,20 @@ body {
 }
 
 .logo-top {
-  font-size: 2.4rem;
-  font-weight: 700;
+  font-size: 2.2rem;
+  font-weight: 900;
   color: #2563EB;
-  letter-spacing: 8px;
-  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 6px;
+  font-family: 'Cinzel', serif;
   text-transform: uppercase;
-  font-style: italic;
+  line-height: 1;
 }
 
 .logo-bottom {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
   color: #1a1a2e;
   letter-spacing: 10px;
   font-family: 'Plus Jakarta Sans', sans-serif;
-  text-transform: uppercase;
+  line-height: 1.5;
 }
