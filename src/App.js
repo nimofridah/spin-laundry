@@ -280,7 +280,11 @@ export default function App() {
       <footer className="footer" id="contact">
         <div className="footer-grid">
           <div>
-            <img src="https://i.postimg.cc/cH9TRQZy/Untitled-design.png" alt="Spin Laundry" className="footer-logo-img" />
+            <div className="logo-stack"></div>
+            <span className="logo-top">SPIN</span>
+            <span className="logo-bottom">LAUNDRY</span>
+            </div>
+          <div>
             <p>Nairobi's most trusted on-demand laundry service. Fresh clothes, zero effort.</p>
           </div>
           <div>
