@@ -97,18 +97,21 @@ export default function App() {
       </div>
 
       {/* NAV */}
-      <nav className="nav">
-        <div className="nav-logo">
-          <img src="https://i.postimg.cc/cH9TRQZy/Untitled-design.png" alt="Spin Laundry" className="logo-img" />
-        </div>
-        <ul className="nav-menu">
-          <li><a href="#how">How It Works</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><button className="btn" onClick={open}>Book Now</button></li>
-        </ul>
-      </nav>
+<nav className="nav">
+  <div className="nav-logo">
+    <div className="logo-stack">
+      <span className="logo-top">SPIN</span>
+      <span className="logo-bottom">LAUNDRY</span>
+    </div>
+  </div>
+  <ul className="nav-menu">
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><button className="btn" onClick={open}>Book Now</button></li>
+  </ul>
+</nav>
 
       {/* HERO */}
       <section className="hero">
