@@ -86,7 +86,17 @@ export default function App() {
   return (
     <div className="app">
       {modal && <Modal onClose={close} />}
-
+{/* WHATSAPP BUTTON */}
+      <a
+      href="https://wa.me/254792570400?text=Hi%20Spin%20Laundry!%20I%20would%20like%20to%20book%20a%20pickup."
+      className="whatsapp-btn"
+      target="_blank"
+      rel="noopener noreferrer"
+      >
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      <span>Chat with us</span>
+       </a>
+      
       {/* TICKER */}
       <div className="ticker-wrap">
         <div className="ticker-track">
@@ -97,30 +107,36 @@ export default function App() {
       </div>
 
       {/* NAV */}
-<nav className="nav">
-  <div className="nav-logo">
-    <div className="logo-stack">
-      <span className="logo-top">SPIN</span>
-      <span className="logo-bottom">LAUNDRY</span>
-    </div>
-  </div>
-  <ul className="nav-menu">
-    <li><a href="#how">How It Works</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#reviews">Reviews</a></li>
-    <li><button className="btn" onClick={open}>Book Now</button></li>
-  </ul>
-</nav>
+      <nav className="nav">
+        <div className="nav-logo">
+          <div className="logo-stack">
+            <span className="logo-top">SPIN</span>
+            <span className="logo-bottom">LAUNDRY</span>
+          </div>
+        </div>
+        <ul className="nav-menu">
+          <li className="nav-phone"><a href="tel:+254712345678">📞 0712 345 678</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><button className="btn" onClick={open}>Book Now</button></li>
+        </ul>
+      </nav>
 
       {/* HERO */}
       <section className="hero">
         <div className="hero-left">
           <span className="pill">🌍 Serving Nairobi & Beyond</span>
+          <div className="trust-badges">
+            <span className="trust-badge">✅ 2,000+ Happy Customers</span>
+            <span className="trust-badge">⚡ 24hr Turnaround</span>
+            <span className="trust-badge">🔒 100% Satisfaction Guaranteed</span>
+          </div>
           <h1>Laundry Done.<br /><span className="accent">Delivered Fresh.</span></h1>
           <p>Drop the stress, not your standards. We pick up your clothes, clean them professionally, and deliver them back fresh — all within 24 hours.</p>
           <div className="hero-actions">
-            <button className="btn lg" onClick={open}>Schedule a Pickup</button>
+            <button className="btn lg pulse" onClick={open}>📅 Schedule a Pickup — It's Free!</button>
             <a href="#how" className="link-btn">See how it works →</a>
           </div>
           <div className="trust-bar">
@@ -277,41 +293,40 @@ export default function App() {
       </Fade>
 
       {/* FOOTER */}
-      {/* FOOTER */}
-<footer className="footer" id="contact">
-  <div className="footer-grid">
-    <div className="footer-brand">
-      <div className="logo-stack">
-        <span className="logo-top">SPIN</span>
-        <span className="logo-bottom-footer">LAUNDRY</span>
-      </div>
-      <p>Nairobi's most trusted on-demand laundry service. Fresh clothes, zero effort.</p>
-    </div>
-    <div>
-      <h4>Services</h4>
-      <a href="#services">Wash & Fold</a>
-      <a href="#services">Wash & Iron</a>
-      <a href="#services">Dry Cleaning</a>
-      <a href="#services">Bedding & Linen</a>
-    </div>
-    <div>
-      <h4>Company</h4>
-      <a href="#how">How It Works</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#reviews">Reviews</a>
-    </div>
-    <div>
-      <h4>Contact</h4>
-      <p>📍 Nairobi, Kenya</p>
-      <p>📞 0792570 400</p>
-      <p>✉️ nim@spinlaundry.co.ke</p>
-      <p>🕐 Mon–Sat, 7am–8pm</p>
-    </div>
-  </div>
-  <div className="footer-bottom">
-    <p>© 2026 Spin Laundry. All rights reserved. Made with ❤️ in Nairobi</p>
-  </div>
-</footer>
+      <footer className="footer" id="contact">
+        <div className="footer-grid">
+          <div className="footer-brand">
+            <div className="logo-stack">
+              <span className="logo-top">SPIN</span>
+              <span className="logo-bottom-footer">LAUNDRY</span>
+            </div>
+            <p>Nairobi's most trusted on-demand laundry service. Fresh clothes, zero effort.</p>
+          </div>
+          <div>
+            <h4>Services</h4>
+            <a href="#services">Wash & Fold</a>
+            <a href="#services">Wash & Iron</a>
+            <a href="#services">Dry Cleaning</a>
+            <a href="#services">Bedding & Linen</a>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="#how">How It Works</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#reviews">Reviews</a>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <p>📍 Nairobi, Kenya</p>
+            <p>📞 0792 570 400</p>
+            <p>✉️ nim@spinlaundry.co.ke</p>
+            <p>🕐 Mon–Sat, 7am–8pm</p>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>© 2026 Spin Laundry. All rights reserved. Made with ❤️ in Nairobi</p>
+        </div>
+      </footer>
     </div>
   );
 }
