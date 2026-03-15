@@ -4,7 +4,8 @@
 html { scroll-behavior: smooth; }
 body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1a1a2e; background-color: #F0EDE8; overflow-x: hidden; }
 
-.app { position: relative; min-height: 100vh; }
+.app { min-height: 100vh; }
+
 .fade { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .fade-in { opacity: 1; transform: translateY(0); }
 
@@ -23,22 +24,23 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1a1a2e; background-
   text-decoration: none;
   box-shadow: 0 8px 25px rgba(37,211,102,0.4);
   transition: all 0.3s;
+  overflow: visible;
 }
+.whatsapp-btn img { width: 30px; height: 30px; }
 .whatsapp-btn span {
   display: none;
   position: absolute;
   right: 65px;
   background: #1a1a2e;
   color: white;
-  padding: 8px 12px;
+  padding: 6px 14px;
   border-radius: 8px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   white-space: nowrap;
+  font-weight: 600;
 }
-.whatsapp-btn:hover span { display: block; font-weight: 600; }
-.whatsapp-btn { position: relative;}
-.whatsapp-btn img { width: 30px; height: 30px; }
-.whatsapp-btn:hover { transform: translateY(-3px); }
+.whatsapp-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(37,211,102,0.5); }
+.whatsapp-btn:hover span { display: block; }
 
 .ticker-wrap { background: #1a1a2e; padding: 10px 0; overflow: hidden; white-space: nowrap; }
 .ticker-track { display: inline-flex; animation: ticker 35s linear infinite; }
@@ -77,7 +79,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1a1a2e; background-
 .hero-rating { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; font-size: 0.9rem; color: #64748b; font-weight: 600; }
 .rating-text { color: #64748b; font-size: 0.9rem; }
 
-.hero { display: flex; align-items: center; justify-content: space-between; padding: 80px 80px; gap: 60px; min-height: 90vh; background: #F0EDE8; }
+.hero { display: flex; align-items: center; justify-content: space-between; padding: 80px; gap: 60px; min-height: 90vh; background: #F0EDE8; }
 .hero-left { flex: 1; max-width: 580px; }
 .hero-left h1 { font-size: 3.8rem; font-weight: 900; line-height: 1.1; margin-bottom: 24px; color: #0f172a; }
 .accent { color: #2563EB; }
@@ -167,9 +169,9 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1a1a2e; background-
 .footer-grid h4 { font-size: 0.8rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: #fff; margin-bottom: 18px; }
 .footer-bottom { border-top: 1px solid #1e293b; padding-top: 24px; text-align: center; color: #475569; font-size: 0.85rem; }
 
-.overlay { position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.65); backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center; padding: 20px; overflow-y: auto; }
+.overlay { position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.65); backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center; padding: 20px; }
 .modal { background: #fff; border-radius: 20px; padding: 40px; width: 100%; max-width: 460px; position: relative; max-height: 90vh; overflow-y: auto; box-shadow: 0 25px 60px rgba(0,0,0,0.2); margin: auto; }
-.close-btn { position: absolute; top: 16px; right: 20px; background: none; border: none; font-size: 1.2rem; cursor: pointer; color: #94a3b8; transition: color 0.2s; }
+.close-btn { position: absolute; top: 16px; right: 20px; background: none; border: none; font-size: 1.2rem; cursor: pointer; color: #94a3b8; }
 .close-btn:hover { color: #0f172a; }
 .modal-header { margin-bottom: 28px; }
 .modal-header h2 { font-size: 1.6rem; font-weight: 900; margin-bottom: 8px; color: #0f172a; }
@@ -218,4 +220,6 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1a1a2e; background-
   .modal { width: 100% !important; max-height: 85vh !important; overflow-y: auto !important; margin: 0 !important; border-radius: 16px !important; }
   .nav-phone { display: none; }
   .ticker-item { padding: 0 20px; font-size: 0.75rem; }
+  .whatsapp-btn { bottom: 20px; right: 20px; width: 50px; height: 50px; }
+  .whatsapp-btn span { display: none !important; }
 }
