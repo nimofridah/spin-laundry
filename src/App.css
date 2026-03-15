@@ -24,7 +24,18 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1a1a2e; background-
   box-shadow: 0 8px 25px rgba(37,211,102,0.4);
   transition: all 0.3s;
 }
-.whatsapp-btn span { display: none; }
+.whatsapp-btn span {
+  display: none;
+  position: absolute;
+  right: 65px;
+  background: #1a1a2e;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+.whatsapp-btn:hover span { display: block; }
 .whatsapp-btn img { width: 30px; height: 30px; }
 .whatsapp-btn:hover { transform: translateY(-3px); }
 
