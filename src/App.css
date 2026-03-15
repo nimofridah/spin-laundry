@@ -377,3 +377,48 @@ body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   line-height: 1.5;
 }
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.logo-bottom-footer {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.footer .logo-top {
+  color: #60a5fa;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 50px;
+  align-items: start;
+}
+/* MOBILE MODAL FIX */
+@media (max-width: 768px) {
+  .overlay {
+    position: fixed;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  .modal {
+    position: relative;
+    margin: auto;
+    max-height: 85vh;
+    overflow-y: auto;
+    width: 100%;
+  }
+}
