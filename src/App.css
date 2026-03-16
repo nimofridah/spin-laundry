@@ -3,7 +3,7 @@
 html { scroll-behavior: smooth; }
 body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1a1a2e; background-color: #F0EDE8; overflow-x: hidden; }
 
-.app { min-height: auto; }
+.app { min-height: 100vh; }
 
 .fade { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .fade-in { opacity: 1; transform: translateY(0); }
@@ -41,12 +41,12 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1a1a2e; background-
 .whatsapp-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(37,211,102,0.5); }
 .whatsapp-btn:hover span { display: block; }
 
-.ticker-wrap { background: #1a1a2e; padding: 10px 0; overflow: hidden; white-space: nowrap; position: sticky; top: 0; z-index: 1001; }
+.ticker-wrap { background: #1a1a2e; padding: 10px 0; overflow: hidden; white-space: nowrap; position: sticky; top: 0; z-index: 1002; }
 .ticker-track { display: inline-flex; animation: ticker 35s linear infinite; }
 .ticker-item { padding: 0 40px; font-size: 0.85rem; font-weight: 600; color: #94a3b8; border-right: 1px solid #ffffff22; }
 @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-.nav { position: sticky; top: 36px; z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: 14px 80px; background: #F0EDE8; border-bottom: 1px solid #ddd8d0; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
+.nav { position: sticky; top: 37px; z-index: 1001; display: flex; align-items: center; justify-content: space-between; padding: 14px 80px; background: #F0EDE8; border-bottom: 1px solid #ddd8d0; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
 .nav-menu { display: flex; align-items: center; gap: 35px; list-style: none; }
 .nav-menu a { text-decoration: none; color: #555; font-weight: 600; font-size: 0.95rem; transition: color 0.2s; }
 .nav-menu a:hover { color: #2563EB; }
@@ -92,7 +92,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1a1a2e; background-
 .hero-right { flex: 1; position: relative; }
 .hero-right img {
   width: 100% !important;
-  border-radius: 250px !important;
+  border-radius: 20px !important;
   object-fit: cover !important;
 }
 .hero-float { position: absolute; bottom: 25px; left: -15px; background: #fff; padding: 12px 20px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); font-weight: 700; font-size: 0.9rem; }
@@ -192,32 +192,32 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1a1a2e; background-
 @media (max-width: 768px) {
   .app { overflow-x: hidden; width: 100%; }
   .nav { padding: 14px 20px;
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 1000 !important;
+    position: fixed !important;
+    top: 36px !important;
+    z-index: 9999 !important;
   }
   .nav-menu { display: none; }
-  .ticker-wrap { position: static; }
-  .hero { flex-direction: column; padding: 40px 20px; min-height: auto; text-align: center; }
+  .hero { flex-direction: column; padding: 20px 0; min-height: auto; text-align: center; }
   .hero-left h1 { font-size: 2.4rem; }
   .hero-actions { justify-content: center; }
   .trust-bar { justify-content: center; gap: 20px; flex-wrap: wrap; }
   .hero-rating { justify-content: center; text-align: center; flex-wrap: wrap; }
-  .hero-right img { max-width: 100%; height: 300px; object-fit: cover; }
+  .hero-right { width: 100%; padding: 0 20px; }
+  .hero-right img { width: 100%; height: 280px; object-fit: cover; border-radius: 16px; }
   .hero-float { display: none; }
-  .how { padding: 60px 20px; }
+  .how { padding: 40px 20px; }
   .steps { grid-template-columns: 1fr; }
-  .services { padding: 60px 20px; }
+  .services { padding: 40px 20px; }
   .service-grid { grid-template-columns: 1fr; }
-  .pricing { padding: 60px 20px; }
+  .pricing { padding: 40px 20px; }
   .price-grid { grid-template-columns: 1fr; }
   .price-card.popular { transform: scale(1); }
-  .why-us { flex-direction: column; padding: 60px 20px; }
+  .why-us { flex-direction: column; padding: 40px 20px; }
   .why-image { width: 100%; }
-  .reviews { padding: 60px 20px; }
+  .reviews { padding: 40px 20px; }
   .review-grid { grid-template-columns: 1fr; width: 100%; }
   .review-card { width: 100%; box-sizing: border-box; }
-  .cta-banner { padding: 60px 20px; }
+  .cta-banner { padding: 40px 20px; }
   .cta-banner h2 { font-size: 1.8rem; }
   .footer { padding: 40px 20px 20px; }
   .footer-grid { grid-template-columns: 1fr; gap: 24px; }
@@ -249,7 +249,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1a1a2e; background-
   max-height: 400px;
   overflow-y: auto;
   position: fixed;
-  top: 70px;
+  top: 116px;
   right: 0;
   width: 70%;
   background: #F0EDE8;

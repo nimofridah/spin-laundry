@@ -56,7 +56,7 @@ function Modal({ onClose }) {
             </div>
             <div className="form-group">
               <label>📞 Phone Number</label>
-              <input placeholder="e.g. 0712 345 678" value={form.phone} onChange={e => update("phone", e.target.value)} />
+              <input placeholder="e.g. 0792 570 400" value={form.phone} onChange={e => update("phone", e.target.value)} />
             </div>
             <div className="form-group">
               <label>📍 Pickup Address</label>
@@ -86,22 +86,14 @@ function Modal({ onClose }) {
 export default function App() {
   const [modal, setModal] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  useEffect(() => {
-  const handleScroll = () => setMenuOpen(false);
-  const handleClickOutside = (e) => {
-    if (menuOpen && !e.target.closest('.mobile-menu') && !e.target.closest('.hamburger')) {
-      setMenuOpen(false);
-    }
-  };
-  window.addEventListener('scroll', handleScroll);
-  window.addEventListener('click', handleClickOutside);
-  return () => {
-    window.removeEventListener('scroll', handleScroll);
-    window.removeEventListener('click', handleClickOutside);
-  };
-}, [menuOpen]);
   const open = () => setModal(true);
   const close = () => setModal(false);
+
+  useEffect(() => {
+    const handleScroll = () => setMenuOpen(false);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const ticker = ["👕 Wash & Fold", "👔 Wash & Iron", "✨ Dry Cleaning", "🏠 Bedding & Linen", "🚚 Free Pickup & Delivery", "⚡ 24hr Turnaround", "🌍 Serving Nairobi", "📱 SMS Updates", "⭐ 5 Star Service", "💧 Eco Friendly"];
 
@@ -123,36 +115,36 @@ export default function App() {
       </div>
 
       <nav className="nav">
-  <div className="nav-logo">
-    <div className="logo-stack">
-      <span className="logo-top">SPIN</span>
-      <span className="logo-bottom">LAUNDRY</span>
-    </div>
-  </div>
-  <ul className="nav-menu">
-    <li className="nav-phone"><a href="tel:+254792570400">📞 0792 570 400</a></li>
-    <li><a href="#how">How It Works</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#reviews">Reviews</a></li>
-    <li><button className="btn" onClick={open}>Book Now</button></li>
-  </ul>
-  <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  {menuOpen && (
-    <div className="mobile-menu">
-      <a href="#how" onClick={() => setMenuOpen(false)}>How It Works</a>
-      <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
-      <a href="#pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
-      <a href="#reviews" onClick={() => setMenuOpen(false)}>Reviews</a>
-      <a href="tel:+254712345678">📞 0792 570 400</a>
-      <button className="btn full" onClick={() => { open(); setMenuOpen(false); }}>Book Now</button>
-    </div>
-  )}
-</nav>
+        <div className="nav-logo">
+          <div className="logo-stack">
+            <span className="logo-top">SPIN</span>
+            <span className="logo-bottom">LAUNDRY</span>
+          </div>
+        </div>
+        <ul className="nav-menu">
+          <li className="nav-phone"><a href="tel:+254792570400">📞 0792 570 400</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><button className="btn" onClick={open}>Book Now</button></li>
+        </ul>
+        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        {menuOpen && (
+          <div className="mobile-menu">
+            <a href="#how" onClick={() => setMenuOpen(false)}>How It Works</a>
+            <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
+            <a href="#pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
+            <a href="#reviews" onClick={() => setMenuOpen(false)}>Reviews</a>
+            <a href="tel:+254792570400">📞 0792 570 400</a>
+            <button className="btn full" onClick={() => { open(); setMenuOpen(false); }}>Book Now</button>
+          </div>
+        )}
+      </nav>
 
       <section className="hero">
         <div className="hero-left">
@@ -287,8 +279,8 @@ export default function App() {
             ))}
           </div>
         </div>
-        <div className="why-image"><img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?w=600&q=80" alt="Why choose us" width="500" height="400" />
-          
+        <div className="why-image">
+          <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?w=600&q=80" alt="Why choose us" width="500" height="400" />
         </div>
       </Fade>
 
@@ -351,7 +343,7 @@ export default function App() {
             <h4>Contact</h4>
             <p>📍 Nairobi, Kenya</p>
             <p>📞 0792 570 400</p>
-            <p>✉️ nimoh@spinlaundry.co.ke</p>
+            <p>✉️ nimo@spinlaundry.co.ke</p>
             <p>🕐 Mon–Sat, 7am–8pm</p>
           </div>
         </div>
