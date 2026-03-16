@@ -46,7 +46,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1a1a2e; background-
 .ticker-item { padding: 0 40px; font-size: 0.85rem; font-weight: 600; color: #94a3b8; border-right: 1px solid #ffffff22; }
 @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-.nav { position: sticky; top: 47px; z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: 14px 80px; background: #F0EDE8; border-bottom: 1px solid #ddd8d0; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
+.nav { position: sticky; top: 36px; z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: 14px 80px; background: #F0EDE8; border-bottom: 1px solid #ddd8d0; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
 .nav-menu { display: flex; align-items: center; gap: 35px; list-style: none; }
 .nav-menu a { text-decoration: none; color: #555; font-weight: 600; font-size: 0.95rem; transition: color 0.2s; }
 .nav-menu a:hover { color: #2563EB; }
@@ -197,6 +197,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1a1a2e; background-
     z-index: 1000 !important;
   }
   .nav-menu { display: none; }
+  .ticker-wrap { position: static; }
   .hero { flex-direction: column; padding: 40px 20px; min-height: auto; text-align: center; }
   .hero-left h1 { font-size: 2.4rem; }
   .hero-actions { justify-content: center; }

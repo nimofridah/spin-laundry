@@ -88,9 +88,18 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
   const handleScroll = () => setMenuOpen(false);
+  const handleClickOutside = (e) => {
+    if (menuOpen && !e.target.closest('.mobile-menu') && !e.target.closest('.hamburger')) {
+      setMenuOpen(false);
+    }
+  };
   window.addEventListener('scroll', handleScroll);
-  return () => window.removeEventListener('scroll', handleScroll);
-}, []);
+  window.addEventListener('click', handleClickOutside);
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+    window.removeEventListener('click', handleClickOutside);
+  };
+}, [menuOpen]);
   const open = () => setModal(true);
   const close = () => setModal(false);
 
