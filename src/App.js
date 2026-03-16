@@ -85,6 +85,7 @@ function Modal({ onClose }) {
 
 export default function App() {
   const [modal, setModal] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const open = () => setModal(true);
   const close = () => setModal(false);
 
@@ -108,21 +109,36 @@ export default function App() {
       </div>
 
       <nav className="nav">
-        <div className="nav-logo">
-          <div className="logo-stack">
-            <span className="logo-top">SPIN</span>
-            <span className="logo-bottom">LAUNDRY</span>
-          </div>
-        </div>
-        <ul className="nav-menu">
-          <li className="nav-phone"><a href="tel:+254792570400">📞 0792 570 400</a></li>
-          <li><a href="#how">How It Works</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><button className="btn" onClick={open}>Book Now</button></li>
-        </ul>
-      </nav>
+  <div className="nav-logo">
+    <div className="logo-stack">
+      <span className="logo-top">SPIN</span>
+      <span className="logo-bottom">LAUNDRY</span>
+    </div>
+  </div>
+  <ul className="nav-menu">
+    <li className="nav-phone"><a href="tel:+254712345678">📞 0712 345 678</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><button className="btn" onClick={open}>Book Now</button></li>
+  </ul>
+  <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  {menuOpen && (
+    <div className="mobile-menu">
+      <a href="#how" onClick={() => setMenuOpen(false)}>How It Works</a>
+      <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
+      <a href="#pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
+      <a href="#reviews" onClick={() => setMenuOpen(false)}>Reviews</a>
+      <a href="tel:+254712345678">📞 0792 570 400</a>
+      <button className="btn full" onClick={() => { open(); setMenuOpen(false); }}>Book Now</button>
+    </div>
+  )}
+</nav>
 
       <section className="hero">
         <div className="hero-left">
@@ -155,7 +171,7 @@ export default function App() {
           </div>
         </div>
         <div className="hero-right">
-          <img src="https://images.unsplash.com/photo-1489274495757-95c7c837b101?w=700&q=80" alt="Laundry Service" />
+          <img src="https://images.unsplash.com/photo-1489274495757-95c7c837b101?w=700&q=80" alt="Laundry Service" width="560" height="400" />
           <div className="hero-float">✅ Free Pickup & Delivery</div>
         </div>
       </section>
@@ -196,7 +212,7 @@ export default function App() {
             { icon: "🏠", title: "Bedding & Linen", desc: "Duvets, bedsheets and towels cleaned and freshened up.", img: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&q=80" },
           ].map((s, i) => (
             <Fade key={i} className="service-card">
-              <img src={s.img} alt={s.title} />
+              <img src={s.img} alt={s.title} width="400" height="180" />
               <div className="service-body">
                 <span className="service-icon">{s.icon}</span>
                 <h3>{s.title}</h3>
@@ -257,8 +273,8 @@ export default function App() {
             ))}
           </div>
         </div>
-        <div className="why-image">
-          <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?w=600&q=80" alt="Why choose us" />
+        <div className="why-image"><img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?w=600&q=80" alt="Why choose us" width="500" height="400" />
+          
         </div>
       </Fade>
 
