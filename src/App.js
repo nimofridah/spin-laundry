@@ -86,6 +86,11 @@ function Modal({ onClose }) {
 export default function App() {
   const [modal, setModal] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  useEffect(() => {
+  const handleScroll = () => setMenuOpen(false);
+  window.addEventListener('scroll', handleScroll);
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
   const open = () => setModal(true);
   const close = () => setModal(false);
 
@@ -171,7 +176,7 @@ export default function App() {
           </div>
         </div>
         <div className="hero-right">
-          <img src="https://images.unsplash.com/photo-1626806787461-102c1a7f1b63?w=700&q=80" alt="Laundry Service" width="560" height="400" />
+          <img src="https://images.unsplash.com/photo-1489274495757-95c7c837b101?w=700&q=80" alt="Laundry Service" width="560" height="400" />
           <div className="hero-float">✅ Free Pickup & Delivery</div>
         </div>
       </section>
