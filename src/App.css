@@ -237,6 +237,8 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1a1a2e; background-
   transition: all 0.3s;
 }
 .mobile-menu {
+  max-height: 400px;
+  overflow-y: auto;
   position: fixed;
   top: 70px;
   right: 0;
@@ -261,5 +263,12 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1a1a2e; background-
 .mobile-menu a:hover { color: #2563EB; }
 
 @media (max-width: 768px) {
+  .nav {
+    position:sticky !important;
+    top:0 !important;
+    z-index:1000 !important;
+  }
+  .app { overflow-x: hidden; width: 100%; }
+  .nav { padding: 14px 20px; }
   .hamburger { display: flex; }
 }
