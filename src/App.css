@@ -250,13 +250,22 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1a1a2e; background-
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   border-bottom: 1px solid #ddd8d0;
 }
-.mobile-menu a {
-  text-decoration: none;
-  color: #1a1a2e;
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 10px 0;
+.mobile-menu {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background: rgba(240, 237, 232, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   border-bottom: 1px solid #ddd8d0;
+  max-height: 60vh;
+  overflow-y: auto;
 }
 .mobile-menu a:hover { color: #2563EB; }
 

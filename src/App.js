@@ -116,7 +116,7 @@ export default function App() {
     </div>
   </div>
   <ul className="nav-menu">
-    <li className="nav-phone"><a href="tel:+254712345678">📞 0712 345 678</a></li>
+    <li className="nav-phone"><a href="tel:+254792570400">📞 0792 570 400</a></li>
     <li><a href="#how">How It Works</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#pricing">Pricing</a></li>
