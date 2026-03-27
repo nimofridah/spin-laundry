@@ -264,6 +264,3 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1a1a2e; background-
   .whatsapp-btn { bottom: 20px; right: 20px; width: 50px; height: 50px; }
   .whatsapp-btn span { display: none !important; }
 }
-{
-  caret-colour: transparent;
-}

@@ -1,3 +1,4 @@
+import { supabase } from './supabase';
 import { useState, useEffect, useRef } from "react";
 import './App.css';
 
@@ -28,9 +29,25 @@ function Modal({ onClose }) {
   const [form, setForm] = useState({ name: "", phone: "", address: "", service: "Wash & Fold", date: "" });
   const [done, setDone] = useState(false);
   const update = (k, v) => setForm(f => ({ ...f, [k]: v }));
-  const submit = () => {
+  const submit = async () => {
     if (!form.name || !form.phone || !form.address || !form.date) return alert("Please fill all fields!");
-    setDone(true);
+    
+    const { error } = await supabase
+      .from('bookings')
+      .insert([{
+        name: form.name,
+        phone: form.phone,
+        address: form.address,
+        service: form.service,
+        date: form.date
+      }]);
+
+    if (error) {
+      alert("Booking failed. Please try again!");
+      console.error(error);
+    } else {
+      setDone(true);
+    }
   };
   return (
     <div className="overlay" onClick={onClose}>
